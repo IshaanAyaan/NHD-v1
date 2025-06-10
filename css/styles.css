@@ -526,3 +526,48 @@ section::before {
   margin-bottom: 1rem;
   font-family: "Playfair Display", serif;
 }
+
+.download-btn-large, .transcript-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  background: linear-gradient(90deg, #36a2ff 0%, #007bff 100%);
+  color: #fff;
+  padding: 1rem 2.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(54,162,255,0.18);
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.download-btn-large:hover, .transcript-btn:hover {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  box-shadow: 0 6px 24px rgba(0,123,255,0.22);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.download-btn-large .btn-icon, .transcript-btn .btn-icon {
+  display: none;
+}
+
+.download-btn-large::after, .transcript-btn::after {
+  content: '→';
+  font-size: 1.2em;
+  margin-left: 0.7em;
+  transition: transform 0.2s;
+}
+
+.download-btn-large:hover::after, .transcript-btn:hover::after {
+  transform: translateX(4px);
+}
+
+.transcript-btn {
+  padding: 0.9rem 2rem;
+  margin: 1rem 1rem 0 0;
+  font-size: 1.05rem;
+}
